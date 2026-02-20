@@ -250,6 +250,19 @@ function increaseIntensity() {
   }, 5000);
 }
 
+  function startFakeLag() {
+  setInterval(() => {
+    // Freeze frame effect
+    document.body.style.transition = "none";
+    document.body.style.filter = "blur(4px) contrast(3)";
+    
+    setTimeout(() => {
+      document.body.style.transition = "0.15s";
+      document.body.style.filter = "none";
+    }, 120);
+  }, 400);
+}
+  
 /* 🎨 THEME COLOR CHAOS */
 function startThemeColorChaos() {
   const meta = document.querySelector(
